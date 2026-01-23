@@ -1,4 +1,4 @@
-'use client';;
+'use client';
 import * as React from 'react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
 
@@ -34,21 +34,24 @@ function StarLayer({
       animate={{ y: [0, -2000] }}
       transition={transition}
       className={cn('absolute top-0 left-0 w-full h-[2000px]', className)}
-      {...props}>
+      {...props}
+    >
       <div
         className="absolute bg-transparent rounded-full"
         style={{
           width: `${size}px`,
           height: `${size}px`,
           boxShadow: boxShadow,
-        }} />
+        }}
+      />
       <div
         className="absolute bg-transparent rounded-full top-[2000px]"
         style={{
           width: `${size}px`,
           height: `${size}px`,
           boxShadow: boxShadow,
-        }} />
+        }}
+      />
     </motion.div>
   );
 }
@@ -69,32 +72,38 @@ function StarsBackground({
   const springX = useSpring(offsetX, transition);
   const springY = useSpring(offsetY, transition);
 
-  const handleMouseMove = React.useCallback((e) => {
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-    const newOffsetX = -(e.clientX - centerX) * factor;
-    const newOffsetY = -(e.clientY - centerY) * factor;
-    offsetX.set(newOffsetX);
-    offsetY.set(newOffsetY);
-  }, [offsetX, offsetY, factor]);
+  const handleMouseMove = React.useCallback(
+    (e) => {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const newOffsetX = -(e.clientX - centerX) * factor;
+      const newOffsetY = -(e.clientY - centerY) * factor;
+      offsetX.set(newOffsetX);
+      offsetY.set(newOffsetY);
+    },
+    [offsetX, offsetY, factor],
+  );
 
   return (
     <div
       data-slot="stars-background"
       className={cn(
-        'relative size-full overflow-hidden bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_100%)]',
-        className
+        'relative size-full overflow-hidden bg-[#060010]',
+        className,
       )}
       onMouseMove={handleMouseMove}
-      {...props}>
+      {...props}
+    >
       <motion.div
         style={{ x: springX, y: springY }}
-        className={cn({ 'pointer-events-none': !pointerEvents })}>
+        className={cn({ 'pointer-events-none': !pointerEvents })}
+      >
         <StarLayer
           count={1000}
           size={1}
           transition={{ repeat: Infinity, duration: speed, ease: 'linear' }}
-          starColor={starColor} />
+          starColor={starColor}
+        />
         <StarLayer
           count={400}
           size={2}
@@ -103,7 +112,8 @@ function StarsBackground({
             duration: speed * 2,
             ease: 'linear',
           }}
-          starColor={starColor} />
+          starColor={starColor}
+        />
         <StarLayer
           count={200}
           size={3}
@@ -112,7 +122,8 @@ function StarsBackground({
             duration: speed * 3,
             ease: 'linear',
           }}
-          starColor={starColor} />
+          starColor={starColor}
+        />
       </motion.div>
       {children}
     </div>
