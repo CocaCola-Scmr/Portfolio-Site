@@ -19,7 +19,7 @@ function generateParticles(count) {
  * Reusable animated background component for non-landing pages.
  * Features floating gradient blobs, optional grid overlay, and floating particles.
  */
-function PageBackground({ showGrid = true, showParticles = true, particleCount = 30 }) {
+function PageBackground({ showGrid = true, showParticles = true, particleCount = 50 }) {
   const particles = useMemo(() => generateParticles(particleCount), [particleCount]);
 
   return (

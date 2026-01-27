@@ -53,7 +53,6 @@ function About() {
       </svg>
 
       <PageBackground />
-      <Navbar />
 
       <motion.div
         initial={{ opacity: 0 }}

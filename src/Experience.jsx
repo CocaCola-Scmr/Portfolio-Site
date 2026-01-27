@@ -94,7 +94,6 @@ function Experience() {
   return (
     <>
       <PageBackground />
-      <Navbar />
 
       <div className="w-[90vw] max-w-[1500px] pt-40 xs:pt-50 md:pt-40  mx-auto">
         <motion.div

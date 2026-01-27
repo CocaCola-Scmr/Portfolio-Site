@@ -75,6 +75,7 @@ function CustomCursor() {
       style={{
         translateX: '-50%',
         translateY: '-50%',
+        mixBlendMode: 'difference',
       }}
     >
       {/* Outer glow/blur ring */}
@@ -83,11 +84,11 @@ function CustomCursor() {
         style={{
           width: '40px',
           height: '40px',
-          background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%)',
+          background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%)',
           transform: 'translate(-50%, -50%)',
           top: '50%',
           left: '50%',
-          filter: 'blur(4px)',
+          filter: 'blur(6px)',
         }}
       />
       {/* Main cursor circle */}
@@ -96,11 +97,9 @@ function CustomCursor() {
         style={{
           width: '20px',
           height: '20px',
-          background: 'rgba(255, 255, 255, 0.25)',
-          backdropFilter: 'blur(4px)',
-          WebkitBackdropFilter: 'blur(4px)',
-          border: '1px solid rgba(255, 255, 255, 0.3)',
-          boxShadow: '0 0 15px rgba(255, 255, 255, 0.1)',
+          background: 'rgba(255, 255, 255, 0.7)',
+          filter: 'blur(1px)',
+          boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)',
         }}
       />
     </motion.div>
