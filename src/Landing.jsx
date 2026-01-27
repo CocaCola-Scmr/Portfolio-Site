@@ -2,23 +2,19 @@ import { StarsBackground } from '@/components/animate-ui/components/backgrounds/
 import { GravityStarsBackground } from '@/components/animate-ui/components/backgrounds/gravity-stars';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
+import TypeWriter from './components/TypeWriter';
 
 function Landing() {
   return (
     <>
-      {/* <p>Hi There!</p>
-      <h1>I'm Naman Lalwani</h1> */}
-
       <StarsBackground
         starColor="#ffffffbd"
-        factor={0.05}
+        factor={0.2}
         speed={70}
         className="w-full h-screen"
-        transition={{ stiffness: 50, damping: 20 }}
+        transition={{ stiffness: 60, damping: 20 }}
       >
         <div className="relative z-10 flex items-center justify-center w-full h-full">
-          <Navbar />
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,28 +26,12 @@ function Landing() {
               Hey There!
             </p>
 
-            {/* Name */}
-            {/* <h2
-              className="text-4xl md:text-6xl font-bold mb-6"
-              style={{
-                color: '#10f2e1',
-                backgroundImage:
-                  'linear-gradient(45deg, #10f2e1 0%, #DE5CFF 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                display: 'inline-block',
-              }}
-            >
-              I'm Naman Lalwani
-            </h2> */}
             <h2 className="text-4xl md:text-6xl font-bold mb-4">
               <span>I'm </span>
               <span
                 style={{
                   color: '#10f2e1',
-                  backgroundImage:
-                    'linear-gradient(90deg, #04CFED 0%, #E503E8 100%)',
+                  backgroundImage: 'linear-gradient(90deg, #04CFED 0%, #E503E8 100%)',
                   backgroundClip: 'text',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -64,9 +44,15 @@ function Landing() {
 
             <br></br>
 
-            {/* Description */}
+            {/* Description with typing animation */}
             <p className="text-lg md:text-2xl leading-relaxed">
-              A Computer Science student at UNSW
+              <span>A </span>
+              <TypeWriter
+                words={['Computer Science Student', 'STEM Coach', 'Tech Enthusiast']}
+                typingSpeed={80}
+                deletingSpeed={40}
+                pauseTime={2000}
+              />
             </p>
           </motion.div>
         </div>
