@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 import Landing from './Landing';
 import Projects from './Projects';
@@ -20,6 +21,8 @@ function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/about" element={<About />} />
       </Routes>
+
+      <Analytics />
     </>
   );
 }
