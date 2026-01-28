@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isLandingPage = location.pathname === '/';
 
   const navLinks = [
     { path: '/projects', label: 'Projects' },
@@ -21,7 +23,9 @@ function Navbar() {
         className="fixed top-10 left-0 right-0 z-50 flex justify-center px-4"
       >
         {/* Desktop Navbar */}
-        <nav className="hidden min-[650px]:flex items-center h-[80px] gap-20 px-10 bg-[#070812]/80 backdrop-blur-md border border-white/10 rounded-full shadow-lg">
+        <nav
+          className={`hidden min-[650px]:flex items-center h-[80px] gap-20 px-10 bg-[#070812]/80 backdrop-blur-md border border-white/10 rounded-full shadow-lg ${isLandingPage ? 'navbar-float' : ''}`}
+        >
           {/* Left side - Logo/Name */}
           <NavLink
             to="/"
@@ -51,7 +55,7 @@ function Navbar() {
                 }
               >
                 {({ isActive }) => (
-                  <>
+                  <span className="relative inline-block">
                     {label}
                     {isActive && (
                       <motion.div
@@ -64,7 +68,7 @@ function Navbar() {
                         }}
                       />
                     )}
-                  </>
+                  </span>
                 )}
               </NavLink>
             ))}
@@ -99,6 +103,22 @@ function Navbar() {
             }
             aria-label="Toggle menu"
           >
+            {/* Pulsing ring on landing page */}
+            {isLandingPage && !isMenuOpen && (
+              <div className="absolute inset-0 rounded-full">
+                <div
+                  className="absolute inset-0 rounded-full navbar-pulse-ring"
+                  style={{
+                    background: 'linear-gradient(135deg, #04CFED 0%, #E503E8 100%)',
+                    padding: '2px',
+                    mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                    maskComposite: 'exclude',
+                    WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                    WebkitMaskComposite: 'xor',
+                  }}
+                />
+              </div>
+            )}
             <AnimatePresence mode="wait">
               {isMenuOpen ? (
                 <motion.div

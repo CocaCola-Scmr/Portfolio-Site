@@ -244,6 +244,57 @@ body {
   }
 }
 
+/* Shimmer effect for navbar links */
+@keyframes shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Floating navbar effect for landing page */
+@keyframes navbarFloat {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 4px 24px -4px rgba(0, 0, 0, 0.4),
+      0 0 0 rgba(4, 207, 237, 0);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow:
+      0 8px 32px -4px rgba(0, 0, 0, 0.5),
+      0 0 30px -10px rgba(4, 207, 237, 0.3),
+      0 0 30px -10px rgba(229, 3, 232, 0.2);
+  }
+}
+
+.navbar-float {
+  animation: navbarFloat 3s ease-in-out infinite;
+}
+
+/* Pulsing ring for mobile hamburger */
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.navbar-pulse-ring {
+  animation: pulseRing 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
 /* Hide scrollbar for gallery */
 .scrollbar-hide {
   -ms-overflow-style: none;
