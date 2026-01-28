@@ -58,7 +58,7 @@ function CustomCursor() {
       animate={{
         x: position.x,
         y: position.y,
-        scale: isHovering ? 1.5 : 1,
+        scale: isHovering ? 2 : 1,
         opacity: isVisible ? 1 : 0,
       }}
       transition={{

@@ -48,7 +48,7 @@ function Landing() {
             <p className="text-lg md:text-2xl leading-relaxed">
               <span>A </span>
               <TypeWriter
-                words={['Computer Science Student', 'STEM Coach', 'Tech Enthusiast']}
+                words={['Computer Science Student', 'Robotics Coach', 'Tech Enthusiast']}
                 typingSpeed={80}
                 deletingSpeed={40}
                 pauseTime={2000}

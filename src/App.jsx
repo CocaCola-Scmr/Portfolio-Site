@@ -6,6 +6,7 @@ import Experience from './Experience';
 import About from './About';
 import CustomCursor from './components/CustomCursor';
 import Navbar from './Navbar';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/about" element={<About />} />
       </Routes>
+
+      <Analytics />
     </>
   );
 }
