@@ -337,7 +337,7 @@ function Experience() {
             }}
             className="card-glow p-8 md:p-10 text-left"
           >
-            <div className="flex items-start justify-between gap-4 mb-6">
+            <div className="flex items-start justify-between gap-4 mb-6 min-[1200px]:flex-row flex-col">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white/95 mb-4">{active.role}</h3>
                 <p className="text-primary font-medium mt-1">{active.company}</p>

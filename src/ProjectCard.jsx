@@ -27,9 +27,7 @@ const ProjectCard = ({ project, index }) => {
 
   const prevImage = () => {
     setDirection(-1);
-    setCurrentImage(
-      (prev) => (prev - 1 + project.images.length) % project.images.length,
-    );
+    setCurrentImage((prev) => (prev - 1 + project.images.length) % project.images.length);
   };
 
   const handleMouseMove = (e) => {
@@ -55,12 +53,9 @@ const ProjectCard = ({ project, index }) => {
       <div className="relative w-full aspect-video overflow-hidden rounded-t-xl bg-white/0">
         {project.images.map((image, imgIndex) => {
           const isCurrent = currentImage === imgIndex;
-          const isNext =
-            (currentImage + 1) % project.images.length === imgIndex;
+          const isNext = (currentImage + 1) % project.images.length === imgIndex;
           const isPrev =
-            (currentImage - 1 + project.images.length) %
-              project.images.length ===
-            imgIndex;
+            (currentImage - 1 + project.images.length) % project.images.length === imgIndex;
 
           let x = '100%';
           if (isCurrent) {
@@ -120,11 +115,7 @@ const ProjectCard = ({ project, index }) => {
                       setCurrentImage(dotIndex);
                     }}
                     className={`relative w-2 h-2 rounded-full overflow-hidden transition-colors duration-150
-          ${
-            isActive
-              ? 'bg-[linear-gradient(45deg,#04CFED,#E503E8)]'
-              : 'bg-gray-600'
-          }`}
+          ${isActive ? 'bg-[linear-gradient(45deg,#04CFED,#E503E8)]' : 'bg-gray-600'}`}
                     aria-label={`Go to slide ${dotIndex + 1}`}
                   />
                 );
@@ -137,7 +128,7 @@ const ProjectCard = ({ project, index }) => {
       {/* Content */}
       <div className="p-6 space-y-4 flex-1 flex flex-col">
         {/* Header */}
-        <div className="flex items-start justify-between gap-4">
+        <div className="flex items-start justify-between gap-4 min-[1000px]:flex-row flex-col">
           <h3
             className="text-xl font-semibold text-white transition-all duration-200"
             style={{
@@ -145,7 +136,7 @@ const ProjectCard = ({ project, index }) => {
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              opacity: 0,
+              opacity: 1,
             }}
             onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
             onMouseLeave={(e) => (e.currentTarget.style.opacity = '0')}
@@ -155,9 +146,7 @@ const ProjectCard = ({ project, index }) => {
           <h3 className="text-xl font-semibold text-white absolute transition-all duration-200 group-hover:opacity-0">
             {project.name}
           </h3>
-          <time className="text-sm text-gray-400 font-mono whitespace-nowrap">
-            {project.date}
-          </time>
+          <time className="text-sm text-gray-400 font-mono whitespace-nowrap">{project.date}</time>
         </div>
 
         {/* Technologies */}
@@ -170,9 +159,7 @@ const ProjectCard = ({ project, index }) => {
         </div>
 
         {/* Description */}
-        <p className="text-gray-300 text-lg leading-relaxed text-left">
-          {project.description}
-        </p>
+        <p className="text-gray-300 text-lg leading-relaxed text-left">{project.description}</p>
 
         {/* Actions */}
         <div className="flex gap-3 pt-2">
