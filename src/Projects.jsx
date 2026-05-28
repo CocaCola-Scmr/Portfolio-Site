@@ -7,6 +7,24 @@ import PageBackground from './components/PageBackground.jsx';
 function Projects() {
   const projects = [
     {
+      id: '0',
+      name: 'Frequencies',
+      date: 'May 2025',
+      description:
+        'Runners Up Award winner at the  DevSoc Halftime Hackathon. A full-stack audio social platform where users share a single 10-second sound once a day.',
+      technologies: ['React 19', 'Supabase', 'PostgreSQL', 'TypeScript', 'Node.js', 'OpenAI'],
+      images: [
+        'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/687/113/datas/original.png',
+        'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/687/114/datas/original.png',
+        'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/687/115/datas/original.png',
+        'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/687/116/datas/original.png',
+        'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/687/123/datas/original.png',
+      ],
+      codeUrl: 'https://github.com/AndyAtmadja03S/halftime',
+      projectUrl: 'https://frequenciess-frontend.vercel.app/',
+      imageFit: 'cover',
+    },
+    {
       id: '1',
       name: 'Skintellgience',
       date: 'May 2025',
@@ -21,6 +39,7 @@ function Projects() {
         '/assets/SkintelligencePhotos/skintelligence5.png',
       ],
       codeUrl: 'https://github.com/inVinci123/skintelligence/tree/frontend',
+      imageVignette: true,
     },
     {
       id: '2',
@@ -53,6 +72,7 @@ function Projects() {
       ],
       projectUrl: 'https://cocacola-scmr.github.io/Gadget-Compass/',
       codeUrl: 'https://github.com/CocaCola-Scmr/Gadget-Compass',
+      imageVignette: true,
     },
   ];
 
