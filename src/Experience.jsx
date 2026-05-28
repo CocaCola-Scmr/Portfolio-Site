@@ -13,6 +13,22 @@ import tankRobot from './assets/Experience/Tank Robot.jpg';
 
 const experiences = [
   {
+    id: '0',
+    company: 'Christophe Living',
+    role: 'Web Development & IT Intern',
+    period: 'April 2026 - Present',
+    description:
+      'Working with a high-end interior design and luxury furniture business to support website development, technical improvements, and digital operations. Contributing to real-world web projects by refining website features, troubleshooting technical issues, and collaborating with internal stakeholders to implement practical solutions in a live production environment.',
+    skills: [
+      'Web Development',
+      'Problem Solving',
+      'Technical Support',
+      'Communication',
+      'Collaboration',
+    ],
+    current: true,
+  },
+  {
     id: '1',
     company: 'Magikid Robotics',
     role: 'Coding and Robotics Coach',
@@ -53,6 +69,23 @@ const experiences = [
 ];
 
 const volunteering = [
+  {
+    id: 'v0',
+    company: 'UNSW Software Development Society',
+    role: 'Subcommittee Member',
+    period: 'February 2026 - Present',
+    description:
+      'Developing and delivering technical workshops for 40+ trainees as part of a 10-week software development training program. Collaborating with other subcommittee members to create engaging content across multiple areas of software engineering, including UI/UX design, HTML/CSS, JavaScript, React, Express.js, and databases. Through these workshops, I help students build both practical development skills and confidence working collaboratively in technical environments.',
+    skills: [
+      'Public Speaking',
+      'React',
+      'Express.js',
+      'JavaScript',
+      'Teaching',
+      'Collaboration',
+    ],
+    current: true,
+  },
   {
     id: 'v1',
     company: 'eReuse @ Arc UNSW',

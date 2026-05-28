@@ -9,7 +9,7 @@ function Projects() {
     {
       id: '0',
       name: 'Frequencies',
-      date: 'May 2025',
+      date: 'May 2026',
       description:
         'Runners Up Award winner at the  DevSoc Halftime Hackathon. A full-stack audio social platform where users share a single 10-second sound once a day.',
       technologies: ['React 19', 'Supabase', 'PostgreSQL', 'TypeScript', 'Node.js', 'OpenAI'],
