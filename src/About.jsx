@@ -20,7 +20,7 @@ const skills = [
 ];
 
 const personalInfo = [
-  { icon: Calendar, label: 'Age', value: '19' },
+  { icon: Calendar, label: 'Age', value: '20' },
   { icon: GraduationCap, label: 'Degree', value: 'B.S. Computer Science @ UNSW' },
   { icon: Languages, label: 'Languages', value: 'English, Hindi' },
   { icon: Heart, label: 'Hobbies', value: 'Cooking, Gym, Camping' },

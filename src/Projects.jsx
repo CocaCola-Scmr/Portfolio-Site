@@ -7,12 +7,30 @@ import PageBackground from './components/PageBackground.jsx';
 function Projects() {
   const projects = [
     {
-      id: '0',
+      id: '1',
+      name: 'PineWire',
+      date: 'June 2026 - July 2026',
+      description:
+        "A cybersecurity education tool that shows what public WiFi networks can see. Creates a real hotspot, captures connected devices' live traffic, and presents it in plain language.",
+      technologies: ['React JS', 'Python', 'FastAPI', 'WebSockets', 'Scapy'],
+      images: [
+        '/assets/PineWire/PineWire0.png?v=2',
+        '/assets/PineWire/PineWire1.png?v=2',
+        '/assets/PineWire/PineWire2.png?v=2',
+        '/assets/PineWire/PineWire3.png?v=2',
+        '/assets/PineWire/PineWire4.png?v=2',
+      ],
+      codeUrl: 'https://github.com/CocaCola-Scmr/Project-PineWire',
+      projectUrl: 'https://project-pine-wire-frontend.vercel.app/',
+      imageVignette: true,
+    },
+    {
+      id: '2',
       name: 'Frequencies',
       date: 'May 2026',
       description:
         'Runners Up Award winner at the  DevSoc Halftime Hackathon. A full-stack audio social platform where users share a single 10-second sound once a day.',
-      technologies: ['React 19', 'Supabase', 'PostgreSQL', 'TypeScript', 'Node.js', 'OpenAI'],
+      technologies: ['React JS', 'Supabase', 'PostgreSQL', 'TypeScript', 'Node.js', 'OpenAI'],
       images: [
         'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/687/113/datas/original.png',
         'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/687/114/datas/original.png',
@@ -25,7 +43,7 @@ function Projects() {
       imageFit: 'cover',
     },
     {
-      id: '1',
+      id: '3',
       name: 'Skintellgience',
       date: 'May 2025',
       description:
@@ -42,7 +60,7 @@ function Projects() {
       imageVignette: true,
     },
     {
-      id: '2',
+      id: '4',
       name: 'StudyPal',
       date: 'May 2024 - September 2024',
       description:
@@ -57,7 +75,7 @@ function Projects() {
       codeUrl: 'https://github.com/devsoc-unsw/trainee-rogue-24t2/tree/frontend',
     },
     {
-      id: '3',
+      id: '5',
       name: 'Gadget Compass',
       date: 'March 2023 - June 2023',
       description:

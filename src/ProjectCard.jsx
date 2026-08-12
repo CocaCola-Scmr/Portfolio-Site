@@ -50,7 +50,7 @@ const ProjectCard = ({ project, index }) => {
       whileHover={{ scale: 1.01, transition: { duration: 0.1 } }}
     >
       {/* Image Slideshow */}
-      <div className="relative w-full aspect-video overflow-hidden rounded-t-xl bg-white/0">
+      <div className="relative w-full aspect-video overflow-hidden rounded-2xl bg-white/0">
         {/* Blurred backdrop for portrait images */}
         {project.imageFit && (
           <div
@@ -65,7 +65,7 @@ const ProjectCard = ({ project, index }) => {
           />
         )}
         {project.imageFit ? (
-          <div className="absolute inset-y-3 left-1/2 -translate-x-1/2 h-[calc(100%-24px)] aspect-[11/19] overflow-hidden rounded-xl z-[1]">
+          <div className="absolute inset-y-3 left-1/2 -translate-x-1/2 h-[calc(100%-24px)] aspect-[11/19] overflow-hidden rounded-2xl z-[1]">
             {project.images.map((image, imgIndex) => {
               const isCurrent = currentImage === imgIndex;
               const isNext = (currentImage + 1) % project.images.length === imgIndex;
@@ -80,7 +80,7 @@ const ProjectCard = ({ project, index }) => {
                   key={imgIndex}
                   src={image}
                   alt={`${project.name} screenshot ${imgIndex + 1}`}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover rounded-2xl"
                   initial={false}
                   animate={{ x, opacity: isCurrent ? 1 : 0 }}
                   transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
@@ -103,7 +103,7 @@ const ProjectCard = ({ project, index }) => {
                 key={imgIndex}
                 src={image}
                 alt={`${project.name} screenshot ${imgIndex + 1}`}
-                className="absolute inset-0 w-full h-full object-contain p-4"
+                className="absolute inset-0 w-full h-full object-contain rounded-2xl p-4"
                 initial={false}
                 animate={{ x, opacity: isCurrent ? 1 : 0 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
@@ -115,7 +115,7 @@ const ProjectCard = ({ project, index }) => {
         {/* Vignette overlay for high-contrast light images */}
         {project.imageVignette && (
           <div
-            className="absolute inset-0 z-[2] pointer-events-none rounded-t-xl"
+            className="absolute inset-0 z-[2] pointer-events-none rounded-2xl"
             style={{
               background:
                 'linear-gradient(to right, rgba(8,6,20,0.55) 0%, transparent 35%, transparent 65%, rgba(8,6,20,0.55) 100%), ' +
